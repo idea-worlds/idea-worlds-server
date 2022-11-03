@@ -1,0 +1,18 @@
+server:
+  port: 9001
+  servlet:
+    context-path: /idea
+spring:
+  application:
+    name: iws-idea
+  profiles:
+    active: dev
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${db.host}:${db.port}/${db.name}?ssl=false&options=-c%20timezone=PRC
+    username: work
+    password: 123456
+db:
+  name: iws
+  host: db
+  port: 5432

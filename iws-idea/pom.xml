@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>info.ideaworlds.server</groupId>
+        <artifactId>idea-worlds-server</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <artifactId>iws-idea</artifactId>
+    <version>${iws-idea.version}</version>
+    <packaging>pom</packaging>
+
+    <properties>
+        <iws-idea.version>1.0-SNAPSHOT</iws-idea.version>
+    </properties>
+
+    <modules>
+        <module>iws-idea-adapter</module>
+        <module>iws-idea-app</module>
+        <module>iws-idea-client</module>
+        <module>iws-idea-domain</module>
+        <module>iws-idea-starter</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>info.ideaworlds.server</groupId>
+                <artifactId>iws-idea-adapter</artifactId>
+                <version>${iws-idea.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.ideaworlds.server</groupId>
+                <artifactId>iws-idea-app</artifactId>
+                <version>${iws-idea.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.ideaworlds.server</groupId>
+                <artifactId>iws-idea-client</artifactId>
+                <version>${iws-idea.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.ideaworlds.server</groupId>
+                <artifactId>iws-idea-domain</artifactId>
+                <version>${iws-idea.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>info.ideaworlds.server</groupId>
+                <artifactId>iws-idea-starter</artifactId>
+                <version>${iws-idea.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+</project>
